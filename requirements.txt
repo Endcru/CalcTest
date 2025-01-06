@@ -1,0 +1,2 @@
+hypothesis==6.100.0
+scikit-image==0.23.1

@@ -1,0 +1,37 @@
+================================================= test session starts =================================================
+platform win32 -- Python 3.11.4, pytest-8.1.1, pluggy-1.4.0
+rootdir: C:\Users\Astolfo
+plugins: anyio-4.1.0, hypothesis-6.100.1
+collected 3 items
+
+. ...                                                                                                            [100%]
+================================================ Hypothesis Statistics ================================================
+
+::test_rgb2gray_with_processed_input:
+
+  - during generate phase (816.03 seconds):
+    - Typical runtimes: ~ 1-12 ms, of which ~ 0-10 ms in data generation
+    - 100000 passing examples, 0 failing examples, 5 invalid examples
+
+  - Stopped because settings.max_examples=100000
+
+
+::test_rgb2hsv_with_processed_input:
+
+  - during generate phase (837.95 seconds):
+    - Typical runtimes: ~ 1-12 ms, of which ~ 0-10 ms in data generation
+    - 100000 passing examples, 0 failing examples, 8 invalid examples
+
+  - Stopped because settings.max_examples=100000
+
+
+::test_match_histograms_with_processed_input:
+
+  - during generate phase (1354.17 seconds):
+    - Typical runtimes: ~ 2-19 ms, of which ~ 1-15 ms in data generation
+    - 100000 passing examples, 0 failing examples, 7 invalid examples
+
+  - Stopped because settings.max_examples=100000
+
+
+=========================================== 3 passed in 3009.70s (0:50:09) ============================================

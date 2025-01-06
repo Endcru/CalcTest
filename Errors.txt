@@ -1,0 +1,104 @@
+Error1
+
+Trying example: test_calculate_with_processed_input(
+    input_string='',
+)
+input_string = ''
+
+>       return stack.pop()
+E       IndexError: pop from empty list
+
+Исправление:
+
+def calculate(s_in):
+    stack = []
+    if len(s_in.split()) == 0:
+        raise CalcException("Нет данных для вычисления")
+    for token in s_in.split():
+        try:
+
+Добавлена ошибка имформирующая об отсутсвии данных для вычисления.
+
+Error 2
+
+Trying example: test_calculate_with_processed_input(
+    input_string='j<·)',
+)
+input_string = 'j<·)'
+
+  elif c_in == ')':
+>               c_tmp = sb_stack[-1]
+E               IndexError: list index out of range
+
+
+Исправление:
+
+        elif c_in == ')':
+            if not sb_stack or len(sb_stack) < 1:
+                    raise CalcException("Ошибка разбора скобок. Проверьте правильность выражения.")
+            c_tmp = sb_stack[-1]
+            while "(" != c_tmp:
+                sb_out.append(" ")
+                sb_out.append(c_tmp)
+                del sb_stack[-1]
+                if not sb_stack or len(sb_stack) < 1:
+                    raise CalcException("Ошибка разбора скобок. Проверьте правильность выражения.")
+                c_tmp = sb_stack[-1]
+            del sb_stack[-1]
+
+Добавлена обработка случая, если закрытая скобка встречается раньше открытой
+
+
+Error 3
+
+Trying example: test_calculate_with_processed_input(
+    input_string='0/0',
+)
+input_string = '0/0'
+
+        for token in s_in.split():
+            try:
+                s_tmp = token.strip()
+                if len(s_tmp) == 1 and is_op(s_tmp):
+                    if len(stack) < 2:
+                        raise CalcException("Неверное количество данных в стеке для операции " + token)
+                    b, a = stack.pop(), stack.pop()
+>                   match s_tmp[1]: #get first character
+                        case '+':
+E                       IndexError: string index out of range
+
+
+Исправление:
+
+
+if len(stack) < 2:
+                    raise CalcException("Неверное количество данных в стеке для операции " + token)
+                b, a = stack.pop(), stack.pop()
+                match s_tmp[0]: #get first character
+
+Исправлено взятие первого элемента с 0й позици в массиве
+
+
+
+Error 4 - Обнаружено без фаззеринга, с помощью просмотра кода (фаззеринг ошибку пропустил)
+
+  File "g:\C\calcPython\calc.py", line 99, in <module>
+    print(calculate(s_in))
+          ^^^^^^^^^^^^^^^
+  File "g:\C\calcPython\calc.py", line 81, in calculate
+    raise NotImplementedError("TODO: Не забыть реализовать оператор !")
+NotImplementedError: TODO: Не забыть реализовать оператор !
+
+Исправление:
+
+                    case '%':
+                        a %= b
+                    case '^':
+                        a **= b
+                    case _:
+                        raise CalcException("Недопустимая операция " + s_tmp)
+
+
+Операция перенасена в недопустимые, так как отсутсвует в тексте main
+
+print("Введите выражение для расчета. Поддерживаются цифры, операции +,-,*,/,^,% и приоритеты в виде скобок ( и ):")

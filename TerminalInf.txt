@@ -1,0 +1,2287 @@
+Test 1
+
+
+========================================================================================================= short test summary info ========================================================================================================== 
+FAILED fuzz.py::test_calculate_with_processed_input - ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+============================================================================================================ 1 failed in 0.38s ============================================================================================================= 
+PS G:\C\calcPython> pytest --hypothesis-show-statistics .\fuzz.py
+=========================================================================================================== test session starts ============================================================================================================
+platform win32 -- Python 3.11.4, pytest-8.1.1, pluggy-1.4.0
+rootdir: G:\C\calcPython
+plugins: anyio-4.1.0, hypothesis-6.100.1
+collected 1 item                                                                                                                                                                                                                             
+
+fuzz.py F                                                                                                                                                                                                                             [100%]
+
+================================================================================================================= FAILURES ================================================================================================================= 
+___________________________________________________________________________________________________ test_calculate_with_processed_input ____________________________________________________________________________________________________ 
+  + Exception Group Traceback (most recent call last):
+  |   File "C:\Users\Astolfo\AppData\Roaming\Python\Python311\site-packages\_pytest\runner.py", line 340, in from_call
+  |     result: Optional[TResult] = func()
+  |                                 ^^^^^^
+  |   File "C:\Users\Astolfo\AppData\Roaming\Python\Python311\site-packages\_pytest\runner.py", line 240, in <lambda>
+  |     lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+  |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\Astolfo\AppData\Roaming\Python\Python311\site-packages\pluggy\_hooks.py", line 501, in __call__
+  |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\Astolfo\AppData\Roaming\Python\Python311\site-packages\pluggy\_manager.py", line 119, in _hookexec
+  |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\Astolfo\AppData\Roaming\Python\Python311\site-packages\pluggy\_callers.py", line 181, in _multicall
+  |     return outcome.get_result()
+  |            ^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\Astolfo\AppData\Roaming\Python\Python311\site-packages\pluggy\_result.py", line 99, in get_result
+  |     raise exc.with_traceback(exc.__traceback__)
+  |   File "C:\Users\Astolfo\AppData\Roaming\Python\Python311\site-packages\pluggy\_callers.py", line 166, in _multicall
+  |     teardown.throw(outcome._exception)
+  |   File "C:\Users\Astolfo\AppData\Roaming\Python\Python311\site-packages\_pytest\threadexception.py", line 87, in pytest_runtest_call
+  |     yield from thread_exception_runtest_hook()
+  |   File "C:\Users\Astolfo\AppData\Roaming\Python\Python311\site-packages\_pytest\threadexception.py", line 63, in thread_exception_runtest_hook
+  |     yield
+  |   File "C:\Users\Astolfo\AppData\Roaming\Python\Python311\site-packages\pluggy\_callers.py", line 166, in _multicall
+  |     teardown.throw(outcome._exception)
+  |   File "C:\Users\Astolfo\AppData\Roaming\Python\Python311\site-packages\_pytest\unraisableexception.py", line 90, in pytest_runtest_call
+  |     yield from unraisable_exception_runtest_hook()
+  |   File "C:\Users\Astolfo\AppData\Roaming\Python\Python311\site-packages\_pytest\unraisableexception.py", line 65, in unraisable_exception_runtest_hook
+  |     yield
+  |   File "C:\Users\Astolfo\AppData\Roaming\Python\Python311\site-packages\pluggy\_callers.py", line 166, in _multicall
+  |     teardown.throw(outcome._exception)
+  |   File "C:\Users\Astolfo\AppData\Roaming\Python\Python311\site-packages\_pytest\logging.py", line 849, in pytest_runtest_call
+  |     yield from self._runtest_for(item, "call")
+  |   File "C:\Users\Astolfo\AppData\Roaming\Python\Python311\site-packages\_pytest\logging.py", line 832, in _runtest_for
+  |     yield
+  |   File "C:\Users\Astolfo\AppData\Roaming\Python\Python311\site-packages\pluggy\_callers.py", line 166, in _multicall
+  |     teardown.throw(outcome._exception)
+  |   File "C:\Users\Astolfo\AppData\Roaming\Python\Python311\site-packages\_pytest\capture.py", line 883, in pytest_runtest_call
+  |     return (yield)
+  |             ^^^^^
+  |   File "C:\Users\Astolfo\AppData\Roaming\Python\Python311\site-packages\pluggy\_callers.py", line 166, in _multicall
+  |     teardown.throw(outcome._exception)
+  |   File "C:\Users\Astolfo\AppData\Roaming\Python\Python311\site-packages\_pytest\skipping.py", line 256, in pytest_runtest_call
+  |     return (yield)
+  |             ^^^^^
+  |   File "C:\Users\Astolfo\AppData\Roaming\Python\Python311\site-packages\pluggy\_callers.py", line 102, in _multicall
+  |     res = hook_impl.function(*args)
+  |           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\Astolfo\AppData\Roaming\Python\Python311\site-packages\_pytest\runner.py", line 182, in pytest_runtest_call
+  |     raise e
+  |   File "C:\Users\Astolfo\AppData\Roaming\Python\Python311\site-packages\_pytest\runner.py", line 172, in pytest_runtest_call
+  |     item.runtest()
+  |   File "C:\Users\Astolfo\AppData\Roaming\Python\Python311\site-packages\_pytest\python.py", line 1772, in runtest
+  |     self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  |   File "C:\Users\Astolfo\AppData\Roaming\Python\Python311\site-packages\pluggy\_hooks.py", line 501, in __call__
+  |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\Astolfo\AppData\Roaming\Python\Python311\site-packages\pluggy\_manager.py", line 119, in _hookexec
+  |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\Astolfo\AppData\Roaming\Python\Python311\site-packages\pluggy\_callers.py", line 138, in _multicall
+  |     raise exception.with_traceback(exception.__traceback__)
+  |   File "C:\Users\Astolfo\AppData\Roaming\Python\Python311\site-packages\pluggy\_callers.py", line 102, in _multicall
+  |     res = hook_impl.function(*args)
+  |           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\Astolfo\AppData\Roaming\Python\Python311\site-packages\_pytest\python.py", line 195, in pytest_pyfunc_call
+  |     result = testfunction(**testargs)
+  |              ^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "G:\C\calcPython\fuzz.py", line 7, in test_calculate_with_processed_input
+  |     @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+  |                    ^^^
+  |   File "C:\Users\Astolfo\AppData\Roaming\Python\Python311\site-packages\hypothesis\core.py", line 1638, in wrapped_test
+  |     raise the_error_hypothesis_found
+  | ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "G:\C\calcPython\fuzz.py", line 12, in test_calculate_with_processed_input
+    |     processed_input = opn(input_string)
+    |                       ^^^^^^^^^^^^^^^^^
+    |   File "G:\C\calcPython\calc.py", line 24, in opn
+    |     c_tmp = sb_stack[-1]
+    |             ~~~~~~~~^^^^
+    | IndexError: list index out of range
+    | Falsifying example: test_calculate_with_processed_input(
+    |     input_string=')',
+    | )
+    | Explanation:
+    |     These lines were always and only run by failing examples:
+    |         G:\C\calcPython\calc.py:24
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "G:\C\calcPython\fuzz.py", line 13, in test_calculate_with_processed_input
+    |     print(calculate(processed_input))
+    |           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "G:\C\calcPython\calc.py", line 88, in calculate
+    |     return stack.pop()
+    |            ^^^^^^^^^^^
+    | IndexError: pop from empty list
+    | Falsifying example: test_calculate_with_processed_input(
+    |     input_string='',
+    | )
+    +------------------------------------
+----------------------------------------------------------------------------------------------------------- Captured stdout call ----------------------------------------------------------------------------------------------------------- 
+0.0
+1.0
+9.0
+---------------------------------------------------------------------------------------------------------------- Hypothesis ---------------------------------------------------------------------------------------------------------------- 
+Trying example: test_calculate_with_processed_input(
+    input_string='',
+)
+input_string = ''
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+            processed_input = opn(input_string)
+>           print(calculate(processed_input))
+
+fuzz.py:13:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = ''
+
+    def calculate(s_in):
+        stack = []
+        for token in s_in.split():
+            try:
+                s_tmp = token.strip()
+                if len(s_tmp) == 1 and is_op(s_tmp):
+                    if len(stack) < 2:
+                        raise CalcException("Неверное количество данных в стеке для операции " + token)
+                    b, a = stack.pop(), stack.pop()
+                    match s_tmp[1]: #get first character
+                        case '+':
+                            a += b
+                        case '-':
+                            a -= b
+                        case '*':
+                            a *= b
+                        case '/':
+                            if b == 0:
+                                return float("inf")
+                            a /= b
+                        case '%':
+                            a %= b
+                        case '^':
+                            a **= b
+                        case '!':
+                            # This operation is not implemented
+                            raise NotImplementedError("TODO: Не забыть реализовать оператор !")
+                        case _:
+                            raise CalcException("Недопустимая операция " + s_tmp)
+                    stack.append(a)
+                else:
+                    a = float(s_tmp)
+                    stack.append(a)
+            except CalcException:
+                raise CalcException("Недопустимый символ в выражении");
+        if len(stack) > 1:
+            raise CalcException("Количество операторов не соответствует количеству операндов")
+
+>       return stack.pop()
+E       IndexError: pop from empty list
+
+calc.py:88: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string=')',
+)
+input_string = ')'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+>           processed_input = opn(input_string)
+
+fuzz.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = ')'
+
+    def opn(s_in):
+        sb_stack, sb_out = [], []
+        for c_in in s_in:
+            if is_op(c_in):
+                while sb_stack and len(sb_stack) > 0:
+                    c_tmp = sb_stack[-1]
+                    if is_op(c_tmp) and op_prior(c_in) <= op_prior(c_tmp):
+                        sb_out.append(" ")
+                        sb_out.append(c_tmp)
+                        sb_out.append(" ")
+                        del sb_stack[-1]
+                    else:
+                        sb_out.append(" ")
+                        break;
+                sb_out.append(" ")
+                sb_stack.append(c_in)
+            elif c_in == '(':
+                sb_stack.append(c_in)
+            elif c_in == ')':
+>               c_tmp = sb_stack[-1]
+E               IndexError: list index out of range
+
+calc.py:24: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string=')',
+)
+input_string = ')'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+>           processed_input = opn(input_string)
+
+fuzz.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = ')'
+
+    def opn(s_in):
+        sb_stack, sb_out = [], []
+        for c_in in s_in:
+            if is_op(c_in):
+                while sb_stack and len(sb_stack) > 0:
+                    c_tmp = sb_stack[-1]
+                    if is_op(c_tmp) and op_prior(c_in) <= op_prior(c_tmp):
+                        sb_out.append(" ")
+                        sb_out.append(c_tmp)
+                        sb_out.append(" ")
+                        del sb_stack[-1]
+                    else:
+                        sb_out.append(" ")
+                        break;
+                sb_out.append(" ")
+                sb_stack.append(c_in)
+            elif c_in == '(':
+                sb_stack.append(c_in)
+            elif c_in == ')':
+>               c_tmp = sb_stack[-1]
+E               IndexError: list index out of range
+
+calc.py:24: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string='¿)',
+)
+input_string = '¿)'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+>           processed_input = opn(input_string)
+
+fuzz.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = '¿)'
+
+    def opn(s_in):
+        sb_stack, sb_out = [], []
+        for c_in in s_in:
+            if is_op(c_in):
+                while sb_stack and len(sb_stack) > 0:
+                    c_tmp = sb_stack[-1]
+                    if is_op(c_tmp) and op_prior(c_in) <= op_prior(c_tmp):
+                        sb_out.append(" ")
+                        sb_out.append(c_tmp)
+                        sb_out.append(" ")
+                        del sb_stack[-1]
+                    else:
+                        sb_out.append(" ")
+                        break;
+                sb_out.append(" ")
+                sb_stack.append(c_in)
+            elif c_in == '(':
+                sb_stack.append(c_in)
+            elif c_in == ')':
+>               c_tmp = sb_stack[-1]
+E               IndexError: list index out of range
+
+calc.py:24: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string='¿))',
+)
+input_string = '¿))'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+>           processed_input = opn(input_string)
+
+fuzz.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = '¿))'
+
+    def opn(s_in):
+        sb_stack, sb_out = [], []
+        for c_in in s_in:
+            if is_op(c_in):
+                while sb_stack and len(sb_stack) > 0:
+                    c_tmp = sb_stack[-1]
+                    if is_op(c_tmp) and op_prior(c_in) <= op_prior(c_tmp):
+                        sb_out.append(" ")
+                        sb_out.append(c_tmp)
+                        sb_out.append(" ")
+                        del sb_stack[-1]
+                    else:
+                        sb_out.append(" ")
+                        break;
+                sb_out.append(" ")
+                sb_stack.append(c_in)
+            elif c_in == '(':
+                sb_stack.append(c_in)
+            elif c_in == ')':
+>               c_tmp = sb_stack[-1]
+E               IndexError: list index out of range
+
+calc.py:24: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string='¿)û',
+)
+input_string = '¿)û'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+>           processed_input = opn(input_string)
+
+fuzz.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = '¿)û'
+
+    def opn(s_in):
+        sb_stack, sb_out = [], []
+        for c_in in s_in:
+            if is_op(c_in):
+                while sb_stack and len(sb_stack) > 0:
+                    c_tmp = sb_stack[-1]
+                    if is_op(c_tmp) and op_prior(c_in) <= op_prior(c_tmp):
+                        sb_out.append(" ")
+                        sb_out.append(c_tmp)
+                        sb_out.append(" ")
+                        del sb_stack[-1]
+                    else:
+                        sb_out.append(" ")
+                        break;
+                sb_out.append(" ")
+                sb_stack.append(c_in)
+            elif c_in == '(':
+                sb_stack.append(c_in)
+            elif c_in == ')':
+>               c_tmp = sb_stack[-1]
+E               IndexError: list index out of range
+
+calc.py:24: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string='',
+)
+input_string = ''
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+            processed_input = opn(input_string)
+>           print(calculate(processed_input))
+
+fuzz.py:13:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = ''
+
+    def calculate(s_in):
+        stack = []
+        for token in s_in.split():
+            try:
+                s_tmp = token.strip()
+                if len(s_tmp) == 1 and is_op(s_tmp):
+                    if len(stack) < 2:
+                        raise CalcException("Неверное количество данных в стеке для операции " + token)
+                    b, a = stack.pop(), stack.pop()
+                    match s_tmp[1]: #get first character
+                        case '+':
+                            a += b
+                        case '-':
+                            a -= b
+                        case '*':
+                            a *= b
+                        case '/':
+                            if b == 0:
+                                return float("inf")
+                            a /= b
+                        case '%':
+                            a %= b
+                        case '^':
+                            a **= b
+                        case '!':
+                            # This operation is not implemented
+                            raise NotImplementedError("TODO: Не забыть реализовать оператор !")
+                        case _:
+                            raise CalcException("Недопустимая операция " + s_tmp)
+                    stack.append(a)
+                else:
+                    a = float(s_tmp)
+                    stack.append(a)
+            except CalcException:
+                raise CalcException("Недопустимый символ в выражении");
+        if len(stack) > 1:
+            raise CalcException("Количество операторов не соответствует количеству операндов")
+
+>       return stack.pop()
+E       IndexError: pop from empty list
+
+calc.py:88: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string=')',
+)
+input_string = ')'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+>           processed_input = opn(input_string)
+
+fuzz.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = ')'
+
+    def opn(s_in):
+        sb_stack, sb_out = [], []
+        for c_in in s_in:
+            if is_op(c_in):
+                while sb_stack and len(sb_stack) > 0:
+                    c_tmp = sb_stack[-1]
+                    if is_op(c_tmp) and op_prior(c_in) <= op_prior(c_tmp):
+                        sb_out.append(" ")
+                        sb_out.append(c_tmp)
+                        sb_out.append(" ")
+                        del sb_stack[-1]
+                    else:
+                        sb_out.append(" ")
+                        break;
+                sb_out.append(" ")
+                sb_stack.append(c_in)
+            elif c_in == '(':
+                sb_stack.append(c_in)
+            elif c_in == ')':
+>               c_tmp = sb_stack[-1]
+E               IndexError: list index out of range
+
+calc.py:24: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string='\x8a£\U000528e1',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string=')',
+)
+input_string = ')'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+>           processed_input = opn(input_string)
+
+fuzz.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = ')'
+
+    def opn(s_in):
+        sb_stack, sb_out = [], []
+        for c_in in s_in:
+            if is_op(c_in):
+                while sb_stack and len(sb_stack) > 0:
+                    c_tmp = sb_stack[-1]
+                    if is_op(c_tmp) and op_prior(c_in) <= op_prior(c_tmp):
+                        sb_out.append(" ")
+                        sb_out.append(c_tmp)
+                        sb_out.append(" ")
+                        del sb_stack[-1]
+                    else:
+                        sb_out.append(" ")
+                        break;
+                sb_out.append(" ")
+                sb_stack.append(c_in)
+            elif c_in == '(':
+                sb_stack.append(c_in)
+            elif c_in == ')':
+>               c_tmp = sb_stack[-1]
+E               IndexError: list index out of range
+
+calc.py:24: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string=')',
+)
+input_string = ')'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+>           processed_input = opn(input_string)
+
+fuzz.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = ')'
+
+    def opn(s_in):
+        sb_stack, sb_out = [], []
+        for c_in in s_in:
+            if is_op(c_in):
+                while sb_stack and len(sb_stack) > 0:
+                    c_tmp = sb_stack[-1]
+                    if is_op(c_tmp) and op_prior(c_in) <= op_prior(c_tmp):
+                        sb_out.append(" ")
+                        sb_out.append(c_tmp)
+                        sb_out.append(" ")
+                        del sb_stack[-1]
+                    else:
+                        sb_out.append(" ")
+                        break;
+                sb_out.append(" ")
+                sb_stack.append(c_in)
+            elif c_in == '(':
+                sb_stack.append(c_in)
+            elif c_in == ')':
+>               c_tmp = sb_stack[-1]
+E               IndexError: list index out of range
+
+calc.py:24: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string=')',
+)
+input_string = ')'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+>           processed_input = opn(input_string)
+
+fuzz.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = ')'
+
+    def opn(s_in):
+        sb_stack, sb_out = [], []
+        for c_in in s_in:
+            if is_op(c_in):
+                while sb_stack and len(sb_stack) > 0:
+                    c_tmp = sb_stack[-1]
+                    if is_op(c_tmp) and op_prior(c_in) <= op_prior(c_tmp):
+                        sb_out.append(" ")
+                        sb_out.append(c_tmp)
+                        sb_out.append(" ")
+                        del sb_stack[-1]
+                    else:
+                        sb_out.append(" ")
+                        break;
+                sb_out.append(" ")
+                sb_stack.append(c_in)
+            elif c_in == '(':
+                sb_stack.append(c_in)
+            elif c_in == ')':
+>               c_tmp = sb_stack[-1]
+E               IndexError: list index out of range
+
+calc.py:24: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string=')',
+)
+input_string = ')'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+>           processed_input = opn(input_string)
+
+fuzz.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = ')'
+
+    def opn(s_in):
+        sb_stack, sb_out = [], []
+        for c_in in s_in:
+            if is_op(c_in):
+                while sb_stack and len(sb_stack) > 0:
+                    c_tmp = sb_stack[-1]
+                    if is_op(c_tmp) and op_prior(c_in) <= op_prior(c_tmp):
+                        sb_out.append(" ")
+                        sb_out.append(c_tmp)
+                        sb_out.append(" ")
+                        del sb_stack[-1]
+                    else:
+                        sb_out.append(" ")
+                        break;
+                sb_out.append(" ")
+                sb_stack.append(c_in)
+            elif c_in == '(':
+                sb_stack.append(c_in)
+            elif c_in == ')':
+>               c_tmp = sb_stack[-1]
+E               IndexError: list index out of range
+
+calc.py:24: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string='0',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='1',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='A',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='H',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='+',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='*',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='9',
+)
+========================================================================================================== Hypothesis Statistics =========================================================================================================== 
+fuzz.py::test_calculate_with_processed_input:
+
+  - during reuse phase (0.12 seconds):
+    - Typical runtimes: ~ 6-73 ms, of which ~ 0-3 ms in data generation
+    - 0 passing examples, 6 failing examples, 0 invalid examples
+    - Found 2 distinct errors in this phase
+
+  - during shrink phase (0.06 seconds):
+    - Typical runtimes: ~ 1-6 ms, of which ~ 0-1 ms in data generation
+    - 8 passing examples, 2 failing examples, 0 invalid examples
+    - Tried 10 shrinks of which 0 were successful
+
+  - Stopped because nothing left to do
+
+
+========================================================================================================= short test summary info ========================================================================================================== 
+FAILED fuzz.py::test_calculate_with_processed_input - ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+============================================================================================================ 1 failed in 0.28s ============================================================================================================= 
+PS G:\C\calcPython>
+
+
+
+
+
+
+
+
+
+
+
+
+
+Test 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+====================================================================================================== test session starts ======================================================================================================
+platform win32 -- Python 3.11.4, pytest-8.1.1, pluggy-1.4.0
+rootdir: G:\C
+plugins: anyio-4.1.0, hypothesis-6.100.1
+collected 1 item
+
+calcPython\fuzz.py F                                                                                                                                                                                                       [100%]
+
+=========================================================================================================== FAILURES ============================================================================================================ 
+______________________________________________________________________________________________ test_calculate_with_processed_input ______________________________________________________________________________________________ 
+
+    @given(st.text(min_size=0))
+>   @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+
+calcPython\fuzz.py:7:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+calcPython\fuzz.py:12: in test_calculate_with_processed_input
+    processed_input = opn(input_string)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+s_in = ')'
+
+    def opn(s_in):
+        sb_stack, sb_out = [], []
+        for c_in in s_in:
+            if is_op(c_in):
+                while sb_stack and len(sb_stack) > 0:
+                    c_tmp = sb_stack[-1]
+                    if is_op(c_tmp) and op_prior(c_in) <= op_prior(c_tmp):
+                        sb_out.append(" ")
+                        sb_out.append(c_tmp)
+                        sb_out.append(" ")
+                        del sb_stack[-1]
+                    else:
+                        sb_out.append(" ")
+                        break;
+                sb_out.append(" ")
+                sb_stack.append(c_in)
+            elif c_in == '(':
+                sb_stack.append(c_in)
+            elif c_in == ')':
+>               c_tmp = sb_stack[-1]
+E               IndexError: list index out of range
+E               Falsifying example: test_calculate_with_processed_input(
+E                   input_string=')',
+E               )
+E               Explanation:
+E                   These lines were always and only run by failing examples:
+E                       G:\C\calcPython\calc.py:24
+
+calcPython\calc.py:24: IndexError
+----------------------------------------------------------------------------------------------------- Captured stdout call ------------------------------------------------------------------------------------------------------ 
+0.0
+1.0
+9.0
+---------------------------------------------------------------------------------------------------------- Hypothesis ----------------------------------------------------------------------------------------------------------- 
+Trying example: test_calculate_with_processed_input(
+    input_string='',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='\U0007898aàS𘋺vwî\t\U000b30b6',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='\x7fÙr',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='j<·)',
+)
+input_string = 'j<·)'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+>           processed_input = opn(input_string)
+
+calcPython\fuzz.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = 'j<·)'
+
+    def opn(s_in):
+        sb_stack, sb_out = [], []
+        for c_in in s_in:
+            if is_op(c_in):
+                while sb_stack and len(sb_stack) > 0:
+                    c_tmp = sb_stack[-1]
+                    if is_op(c_tmp) and op_prior(c_in) <= op_prior(c_tmp):
+                        sb_out.append(" ")
+                        sb_out.append(c_tmp)
+                        sb_out.append(" ")
+                        del sb_stack[-1]
+                    else:
+                        sb_out.append(" ")
+                        break;
+                sb_out.append(" ")
+                sb_stack.append(c_in)
+            elif c_in == '(':
+                sb_stack.append(c_in)
+            elif c_in == ')':
+>               c_tmp = sb_stack[-1]
+E               IndexError: list index out of range
+
+calcPython\calc.py:24: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string='g\x95lØ~\U000ce1fc',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='g\x95lØ~<',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='g\x95lØ~<',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='g\x95<Ø~<',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='g\x95<<~<',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='g\x95<<~<',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='j<·)',
+)
+input_string = 'j<·)'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+>           processed_input = opn(input_string)
+
+calcPython\fuzz.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = 'j<·)'
+
+    def opn(s_in):
+        sb_stack, sb_out = [], []
+        for c_in in s_in:
+            if is_op(c_in):
+                while sb_stack and len(sb_stack) > 0:
+                    c_tmp = sb_stack[-1]
+                    if is_op(c_tmp) and op_prior(c_in) <= op_prior(c_tmp):
+                        sb_out.append(" ")
+                        sb_out.append(c_tmp)
+                        sb_out.append(" ")
+                        del sb_stack[-1]
+                    else:
+                        sb_out.append(" ")
+                        break;
+                sb_out.append(" ")
+                sb_stack.append(c_in)
+            elif c_in == '(':
+                sb_stack.append(c_in)
+            elif c_in == ')':
+>               c_tmp = sb_stack[-1]
+E               IndexError: list index out of range
+
+calcPython\calc.py:24: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string='j·)',
+)
+input_string = 'j·)'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+>           processed_input = opn(input_string)
+
+calcPython\fuzz.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = 'j·)'
+
+    def opn(s_in):
+        sb_stack, sb_out = [], []
+        for c_in in s_in:
+            if is_op(c_in):
+                while sb_stack and len(sb_stack) > 0:
+                    c_tmp = sb_stack[-1]
+                    if is_op(c_tmp) and op_prior(c_in) <= op_prior(c_tmp):
+                        sb_out.append(" ")
+                        sb_out.append(c_tmp)
+                        sb_out.append(" ")
+                        del sb_stack[-1]
+                    else:
+                        sb_out.append(" ")
+                        break;
+                sb_out.append(" ")
+                sb_stack.append(c_in)
+            elif c_in == '(':
+                sb_stack.append(c_in)
+            elif c_in == ')':
+>               c_tmp = sb_stack[-1]
+E               IndexError: list index out of range
+
+calcPython\calc.py:24: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string=')',
+)
+input_string = ')'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+>           processed_input = opn(input_string)
+
+calcPython\fuzz.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = ')'
+
+    def opn(s_in):
+        sb_stack, sb_out = [], []
+        for c_in in s_in:
+            if is_op(c_in):
+                while sb_stack and len(sb_stack) > 0:
+                    c_tmp = sb_stack[-1]
+                    if is_op(c_tmp) and op_prior(c_in) <= op_prior(c_tmp):
+                        sb_out.append(" ")
+                        sb_out.append(c_tmp)
+                        sb_out.append(" ")
+                        del sb_stack[-1]
+                    else:
+                        sb_out.append(" ")
+                        break;
+                sb_out.append(" ")
+                sb_stack.append(c_in)
+            elif c_in == '(':
+                sb_stack.append(c_in)
+            elif c_in == ')':
+>               c_tmp = sb_stack[-1]
+E               IndexError: list index out of range
+
+calcPython\calc.py:24: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string='',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string=')',
+)
+input_string = ')'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+>           processed_input = opn(input_string)
+
+calcPython\fuzz.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = ')'
+
+    def opn(s_in):
+        sb_stack, sb_out = [], []
+        for c_in in s_in:
+            if is_op(c_in):
+                while sb_stack and len(sb_stack) > 0:
+                    c_tmp = sb_stack[-1]
+                    if is_op(c_tmp) and op_prior(c_in) <= op_prior(c_tmp):
+                        sb_out.append(" ")
+                        sb_out.append(c_tmp)
+                        sb_out.append(" ")
+                        del sb_stack[-1]
+                    else:
+                        sb_out.append(" ")
+                        break;
+                sb_out.append(" ")
+                sb_stack.append(c_in)
+            elif c_in == '(':
+                sb_stack.append(c_in)
+            elif c_in == ')':
+>               c_tmp = sb_stack[-1]
+E               IndexError: list index out of range
+
+calcPython\calc.py:24: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string=')',
+)
+input_string = ')'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+>           processed_input = opn(input_string)
+
+calcPython\fuzz.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = ')'
+
+    def opn(s_in):
+        sb_stack, sb_out = [], []
+        for c_in in s_in:
+            if is_op(c_in):
+                while sb_stack and len(sb_stack) > 0:
+                    c_tmp = sb_stack[-1]
+                    if is_op(c_tmp) and op_prior(c_in) <= op_prior(c_tmp):
+                        sb_out.append(" ")
+                        sb_out.append(c_tmp)
+                        sb_out.append(" ")
+                        del sb_stack[-1]
+                    else:
+                        sb_out.append(" ")
+                        break;
+                sb_out.append(" ")
+                sb_stack.append(c_in)
+            elif c_in == '(':
+                sb_stack.append(c_in)
+            elif c_in == ')':
+>               c_tmp = sb_stack[-1]
+E               IndexError: list index out of range
+
+calcPython\calc.py:24: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string=')',
+)
+input_string = ')'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+>           processed_input = opn(input_string)
+
+calcPython\fuzz.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = ')'
+
+    def opn(s_in):
+        sb_stack, sb_out = [], []
+        for c_in in s_in:
+            if is_op(c_in):
+                while sb_stack and len(sb_stack) > 0:
+                    c_tmp = sb_stack[-1]
+                    if is_op(c_tmp) and op_prior(c_in) <= op_prior(c_tmp):
+                        sb_out.append(" ")
+                        sb_out.append(c_tmp)
+                        sb_out.append(" ")
+                        del sb_stack[-1]
+                    else:
+                        sb_out.append(" ")
+                        break;
+                sb_out.append(" ")
+                sb_stack.append(c_in)
+            elif c_in == '(':
+                sb_stack.append(c_in)
+            elif c_in == ')':
+>               c_tmp = sb_stack[-1]
+E               IndexError: list index out of range
+
+calcPython\calc.py:24: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string=')',
+)
+input_string = ')'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+>           processed_input = opn(input_string)
+
+calcPython\fuzz.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = ')'
+
+    def opn(s_in):
+        sb_stack, sb_out = [], []
+        for c_in in s_in:
+            if is_op(c_in):
+                while sb_stack and len(sb_stack) > 0:
+                    c_tmp = sb_stack[-1]
+                    if is_op(c_tmp) and op_prior(c_in) <= op_prior(c_tmp):
+                        sb_out.append(" ")
+                        sb_out.append(c_tmp)
+                        sb_out.append(" ")
+                        del sb_stack[-1]
+                    else:
+                        sb_out.append(" ")
+                        break;
+                sb_out.append(" ")
+                sb_stack.append(c_in)
+            elif c_in == '(':
+                sb_stack.append(c_in)
+            elif c_in == ')':
+>               c_tmp = sb_stack[-1]
+E               IndexError: list index out of range
+
+calcPython\calc.py:24: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string=')',
+)
+input_string = ')'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+>           processed_input = opn(input_string)
+
+calcPython\fuzz.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = ')'
+
+    def opn(s_in):
+        sb_stack, sb_out = [], []
+        for c_in in s_in:
+            if is_op(c_in):
+                while sb_stack and len(sb_stack) > 0:
+                    c_tmp = sb_stack[-1]
+                    if is_op(c_tmp) and op_prior(c_in) <= op_prior(c_tmp):
+                        sb_out.append(" ")
+                        sb_out.append(c_tmp)
+                        sb_out.append(" ")
+                        del sb_stack[-1]
+                    else:
+                        sb_out.append(" ")
+                        break;
+                sb_out.append(" ")
+                sb_stack.append(c_in)
+            elif c_in == '(':
+                sb_stack.append(c_in)
+            elif c_in == ')':
+>               c_tmp = sb_stack[-1]
+E               IndexError: list index out of range
+
+calcPython\calc.py:24: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string=')',
+)
+input_string = ')'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+>           processed_input = opn(input_string)
+
+calcPython\fuzz.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = ')'
+
+    def opn(s_in):
+        sb_stack, sb_out = [], []
+        for c_in in s_in:
+            if is_op(c_in):
+                while sb_stack and len(sb_stack) > 0:
+                    c_tmp = sb_stack[-1]
+                    if is_op(c_tmp) and op_prior(c_in) <= op_prior(c_tmp):
+                        sb_out.append(" ")
+                        sb_out.append(c_tmp)
+                        sb_out.append(" ")
+                        del sb_stack[-1]
+                    else:
+                        sb_out.append(" ")
+                        break;
+                sb_out.append(" ")
+                sb_stack.append(c_in)
+            elif c_in == '(':
+                sb_stack.append(c_in)
+            elif c_in == ')':
+>               c_tmp = sb_stack[-1]
+E               IndexError: list index out of range
+
+calcPython\calc.py:24: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string=')',
+)
+input_string = ')'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+>           processed_input = opn(input_string)
+
+calcPython\fuzz.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = ')'
+
+    def opn(s_in):
+        sb_stack, sb_out = [], []
+        for c_in in s_in:
+            if is_op(c_in):
+                while sb_stack and len(sb_stack) > 0:
+                    c_tmp = sb_stack[-1]
+                    if is_op(c_tmp) and op_prior(c_in) <= op_prior(c_tmp):
+                        sb_out.append(" ")
+                        sb_out.append(c_tmp)
+                        sb_out.append(" ")
+                        del sb_stack[-1]
+                    else:
+                        sb_out.append(" ")
+                        break;
+                sb_out.append(" ")
+                sb_stack.append(c_in)
+            elif c_in == '(':
+                sb_stack.append(c_in)
+            elif c_in == ')':
+>               c_tmp = sb_stack[-1]
+E               IndexError: list index out of range
+
+calcPython\calc.py:24: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string='0',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='1',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='A',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='H',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='+',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='*',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='9',
+)
+===================================================================================================== Hypothesis Statistics ===================================================================================================== 
+calcPython/fuzz.py::test_calculate_with_processed_input:
+
+  - during generate phase (0.10 seconds):
+    - Typical runtimes: ~ 0-72 ms, of which ~ 0-4 ms in data generation
+    - 9 passing examples, 1 failing examples, 0 invalid examples
+    - Found 1 distinct error in this phase
+
+  - during shrink phase (0.13 seconds):
+    - Typical runtimes: ~ 1-7 ms, of which ~ 0-1 ms in data generation
+    - 8 passing examples, 5 failing examples, 0 invalid examples
+    - Tried 13 shrinks of which 4 were successful
+
+  - Stopped because nothing left to do
+
+
+==================================================================================================== short test summary info ==================================================================================================== 
+FAILED calcPython/fuzz.py::test_calculate_with_processed_input - IndexError: list index out of range
+======================================================================================================= 1 failed in 0.40s ======================================================================================================= 
+PS G:\C> 
+
+
+
+
+
+
+
+Test 3
+
+
+
+
+
+
+
+
+
+
+
+================================================= test session starts =================================================
+platform win32 -- Python 3.11.4, pytest-8.1.1, pluggy-1.4.0
+rootdir: C:\Users\Astolfo
+plugins: anyio-4.1.0, hypothesis-6.100.1
+collected 1 item
+
+. F                                                                                                              [100%]
+
+====================================================== FAILURES =======================================================
+_________________________________________ test_calculate_with_processed_input _________________________________________
+
+    @given(st.text(min_size=0))
+>   @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+
+G:\C\calcPython\fuzz.py:7:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+G:\C\calcPython\fuzz.py:13: in test_calculate_with_processed_input
+    print(calculate(processed_input))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = '0 0 /'
+
+    def calculate(s_in):
+        stack = []
+        if len(s_in.split()) == 0:
+            raise CalcException("Нет данных для вычисления")
+        for token in s_in.split():
+            try:
+                s_tmp = token.strip()
+                if len(s_tmp) == 1 and is_op(s_tmp):
+                    if len(stack) < 2:
+                        raise CalcException("Неверное количество данных в стеке для операции " + token)
+                    b, a = stack.pop(), stack.pop()
+>                   match s_tmp[1]: #get first character
+                        case '+':
+E                       IndexError: string index out of range
+E                       Falsifying example: test_calculate_with_processed_input(
+E                           input_string='0/0',
+E                       )
+E                       Explanation:
+E                           These lines were always and only run by failing examples:
+E                               G:\C\calcPython\calc.py:62
+
+G:\C\calcPython\calc.py:63: IndexError
+------------------------------------------------ Captured stdout call -------------------------------------------------
+0.0
+1.0
+1.0
+0.0
+1.0
+1.0
+0.0
+10.0
+0.0
+30.0
+20.0
+40.0
+90.0
+9.0
+90.0
+----------------------------------------------------- Hypothesis ------------------------------------------------------
+Trying example: test_calculate_with_processed_input(
+    input_string='0/0',
+)
+input_string = '0/0'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+            processed_input = opn(input_string)
+>           print(calculate(processed_input))
+
+G:\C\calcPython\fuzz.py:13:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = '0 0 /'
+
+    def calculate(s_in):
+        stack = []
+        if len(s_in.split()) == 0:
+            raise CalcException("Нет данных для вычисления")
+        for token in s_in.split():
+            try:
+                s_tmp = token.strip()
+                if len(s_tmp) == 1 and is_op(s_tmp):
+                    if len(stack) < 2:
+                        raise CalcException("Неверное количество данных в стеке для операции " + token)
+                    b, a = stack.pop(), stack.pop()
+>                   match s_tmp[1]: #get first character
+                        case '+':
+E                       IndexError: string index out of range
+
+G:\C\calcPython\calc.py:63: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string='0-0',
+)
+input_string = '0-0'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+            processed_input = opn(input_string)
+>           print(calculate(processed_input))
+
+G:\C\calcPython\fuzz.py:13:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = '0 0 -'
+
+    def calculate(s_in):
+        stack = []
+        if len(s_in.split()) == 0:
+            raise CalcException("Нет данных для вычисления")
+        for token in s_in.split():
+            try:
+                s_tmp = token.strip()
+                if len(s_tmp) == 1 and is_op(s_tmp):
+                    if len(stack) < 2:
+                        raise CalcException("Неверное количество данных в стеке для операции " + token)
+                    b, a = stack.pop(), stack.pop()
+>                   match s_tmp[1]: #get first character
+                        case '+':
+E                       IndexError: string index out of range
+
+G:\C\calcPython\calc.py:63: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string='0+0',
+)
+input_string = '0+0'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+            processed_input = opn(input_string)
+>           print(calculate(processed_input))
+
+G:\C\calcPython\fuzz.py:13:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = '0 0 +'
+
+    def calculate(s_in):
+        stack = []
+        if len(s_in.split()) == 0:
+            raise CalcException("Нет данных для вычисления")
+        for token in s_in.split():
+            try:
+                s_tmp = token.strip()
+                if len(s_tmp) == 1 and is_op(s_tmp):
+                    if len(stack) < 2:
+                        raise CalcException("Неверное количество данных в стеке для операции " + token)
+                    b, a = stack.pop(), stack.pop()
+>                   match s_tmp[1]: #get first character
+                        case '+':
+E                       IndexError: string index out of range
+
+G:\C\calcPython\calc.py:63: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string='7+7',
+)
+input_string = '7+7'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+            processed_input = opn(input_string)
+>           print(calculate(processed_input))
+
+G:\C\calcPython\fuzz.py:13:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = '7 7 +'
+
+    def calculate(s_in):
+        stack = []
+        if len(s_in.split()) == 0:
+            raise CalcException("Нет данных для вычисления")
+        for token in s_in.split():
+            try:
+                s_tmp = token.strip()
+                if len(s_tmp) == 1 and is_op(s_tmp):
+                    if len(stack) < 2:
+                        raise CalcException("Неверное количество данных в стеке для операции " + token)
+                    b, a = stack.pop(), stack.pop()
+>                   match s_tmp[1]: #get first character
+                        case '+':
+E                       IndexError: string index out of range
+
+G:\C\calcPython\calc.py:63: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string='7+7',
+)
+input_string = '7+7'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+            processed_input = opn(input_string)
+>           print(calculate(processed_input))
+
+G:\C\calcPython\fuzz.py:13:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = '7 7 +'
+
+    def calculate(s_in):
+        stack = []
+        if len(s_in.split()) == 0:
+            raise CalcException("Нет данных для вычисления")
+        for token in s_in.split():
+            try:
+                s_tmp = token.strip()
+                if len(s_tmp) == 1 and is_op(s_tmp):
+                    if len(stack) < 2:
+                        raise CalcException("Неверное количество данных в стеке для операции " + token)
+                    b, a = stack.pop(), stack.pop()
+>                   match s_tmp[1]: #get first character
+                        case '+':
+E                       IndexError: string index out of range
+
+G:\C\calcPython\calc.py:63: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string='7+7+',
+)
+input_string = '7+7+'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+            processed_input = opn(input_string)
+>           print(calculate(processed_input))
+
+G:\C\calcPython\fuzz.py:13:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = '7 7 +   +'
+
+    def calculate(s_in):
+        stack = []
+        if len(s_in.split()) == 0:
+            raise CalcException("Нет данных для вычисления")
+        for token in s_in.split():
+            try:
+                s_tmp = token.strip()
+                if len(s_tmp) == 1 and is_op(s_tmp):
+                    if len(stack) < 2:
+                        raise CalcException("Неверное количество данных в стеке для операции " + token)
+                    b, a = stack.pop(), stack.pop()
+>                   match s_tmp[1]: #get first character
+                        case '+':
+E                       IndexError: string index out of range
+
+G:\C\calcPython\calc.py:63: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string='7+7+\x7f',
+)
+input_string = '7+7+\x7f'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+            processed_input = opn(input_string)
+>           print(calculate(processed_input))
+
+G:\C\calcPython\fuzz.py:13:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = '7 7 +  \x7f +'
+
+    def calculate(s_in):
+        stack = []
+        if len(s_in.split()) == 0:
+            raise CalcException("Нет данных для вычисления")
+        for token in s_in.split():
+            try:
+                s_tmp = token.strip()
+                if len(s_tmp) == 1 and is_op(s_tmp):
+                    if len(stack) < 2:
+                        raise CalcException("Неверное количество данных в стеке для операции " + token)
+                    b, a = stack.pop(), stack.pop()
+>                   match s_tmp[1]: #get first character
+                        case '+':
+E                       IndexError: string index out of range
+
+G:\C\calcPython\calc.py:63: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string='7+7+\x7f',
+)
+input_string = '7+7+\x7f'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+            processed_input = opn(input_string)
+>           print(calculate(processed_input))
+
+G:\C\calcPython\fuzz.py:13:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = '7 7 +  \x7f +'
+
+    def calculate(s_in):
+        stack = []
+        if len(s_in.split()) == 0:
+            raise CalcException("Нет данных для вычисления")
+        for token in s_in.split():
+            try:
+                s_tmp = token.strip()
+                if len(s_tmp) == 1 and is_op(s_tmp):
+                    if len(stack) < 2:
+                        raise CalcException("Неверное количество данных в стеке для операции " + token)
+                    b, a = stack.pop(), stack.pop()
+>                   match s_tmp[1]: #get first character
+                        case '+':
+E                       IndexError: string index out of range
+
+G:\C\calcPython\calc.py:63: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string='7+7+\x7f',
+)
+input_string = '7+7+\x7f'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+            processed_input = opn(input_string)
+>           print(calculate(processed_input))
+
+G:\C\calcPython\fuzz.py:13:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = '7 7 +  \x7f +'
+
+    def calculate(s_in):
+        stack = []
+        if len(s_in.split()) == 0:
+            raise CalcException("Нет данных для вычисления")
+        for token in s_in.split():
+            try:
+                s_tmp = token.strip()
+                if len(s_tmp) == 1 and is_op(s_tmp):
+                    if len(stack) < 2:
+                        raise CalcException("Неверное количество данных в стеке для операции " + token)
+                    b, a = stack.pop(), stack.pop()
+>                   match s_tmp[1]: #get first character
+                        case '+':
+E                       IndexError: string index out of range
+
+G:\C\calcPython\calc.py:63: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string='0/0',
+)
+input_string = '0/0'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+            processed_input = opn(input_string)
+>           print(calculate(processed_input))
+
+G:\C\calcPython\fuzz.py:13:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = '0 0 /'
+
+    def calculate(s_in):
+        stack = []
+        if len(s_in.split()) == 0:
+            raise CalcException("Нет данных для вычисления")
+        for token in s_in.split():
+            try:
+                s_tmp = token.strip()
+                if len(s_tmp) == 1 and is_op(s_tmp):
+                    if len(stack) < 2:
+                        raise CalcException("Неверное количество данных в стеке для операции " + token)
+                    b, a = stack.pop(), stack.pop()
+>                   match s_tmp[1]: #get first character
+                        case '+':
+E                       IndexError: string index out of range
+
+G:\C\calcPython\calc.py:63: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string='',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='0',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='1',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='1',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='0/',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='00',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='/0',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='Ⰱ',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='01',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='01',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='0/0',
+)
+input_string = '0/0'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+            processed_input = opn(input_string)
+>           print(calculate(processed_input))
+
+G:\C\calcPython\fuzz.py:13:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = '0 0 /'
+
+    def calculate(s_in):
+        stack = []
+        if len(s_in.split()) == 0:
+            raise CalcException("Нет данных для вычисления")
+        for token in s_in.split():
+            try:
+                s_tmp = token.strip()
+                if len(s_tmp) == 1 and is_op(s_tmp):
+                    if len(stack) < 2:
+                        raise CalcException("Неверное количество данных в стеке для операции " + token)
+                    b, a = stack.pop(), stack.pop()
+>                   match s_tmp[1]: #get first character
+                        case '+':
+E                       IndexError: string index out of range
+
+G:\C\calcPython\calc.py:63: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string='0/0',
+)
+input_string = '0/0'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+            processed_input = opn(input_string)
+>           print(calculate(processed_input))
+
+G:\C\calcPython\fuzz.py:13:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = '0 0 /'
+
+    def calculate(s_in):
+        stack = []
+        if len(s_in.split()) == 0:
+            raise CalcException("Нет данных для вычисления")
+        for token in s_in.split():
+            try:
+                s_tmp = token.strip()
+                if len(s_tmp) == 1 and is_op(s_tmp):
+                    if len(stack) < 2:
+                        raise CalcException("Неверное количество данных в стеке для операции " + token)
+                    b, a = stack.pop(), stack.pop()
+>                   match s_tmp[1]: #get first character
+                        case '+':
+E                       IndexError: string index out of range
+
+G:\C\calcPython\calc.py:63: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string='0/0',
+)
+input_string = '0/0'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+            processed_input = opn(input_string)
+>           print(calculate(processed_input))
+
+G:\C\calcPython\fuzz.py:13:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = '0 0 /'
+
+    def calculate(s_in):
+        stack = []
+        if len(s_in.split()) == 0:
+            raise CalcException("Нет данных для вычисления")
+        for token in s_in.split():
+            try:
+                s_tmp = token.strip()
+                if len(s_tmp) == 1 and is_op(s_tmp):
+                    if len(stack) < 2:
+                        raise CalcException("Неверное количество данных в стеке для операции " + token)
+                    b, a = stack.pop(), stack.pop()
+>                   match s_tmp[1]: #get first character
+                        case '+':
+E                       IndexError: string index out of range
+
+G:\C\calcPython\calc.py:63: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string='0/0',
+)
+input_string = '0/0'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+            processed_input = opn(input_string)
+>           print(calculate(processed_input))
+
+G:\C\calcPython\fuzz.py:13:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = '0 0 /'
+
+    def calculate(s_in):
+        stack = []
+        if len(s_in.split()) == 0:
+            raise CalcException("Нет данных для вычисления")
+        for token in s_in.split():
+            try:
+                s_tmp = token.strip()
+                if len(s_tmp) == 1 and is_op(s_tmp):
+                    if len(stack) < 2:
+                        raise CalcException("Неверное количество данных в стеке для операции " + token)
+                    b, a = stack.pop(), stack.pop()
+>                   match s_tmp[1]: #get first character
+                        case '+':
+E                       IndexError: string index out of range
+
+G:\C\calcPython\calc.py:63: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string='0/0',
+)
+input_string = '0/0'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+            processed_input = opn(input_string)
+>           print(calculate(processed_input))
+
+G:\C\calcPython\fuzz.py:13:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = '0 0 /'
+
+    def calculate(s_in):
+        stack = []
+        if len(s_in.split()) == 0:
+            raise CalcException("Нет данных для вычисления")
+        for token in s_in.split():
+            try:
+                s_tmp = token.strip()
+                if len(s_tmp) == 1 and is_op(s_tmp):
+                    if len(stack) < 2:
+                        raise CalcException("Неверное количество данных в стеке для операции " + token)
+                    b, a = stack.pop(), stack.pop()
+>                   match s_tmp[1]: #get first character
+                        case '+':
+E                       IndexError: string index out of range
+
+G:\C\calcPython\calc.py:63: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string='0/0',
+)
+input_string = '0/0'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+            processed_input = opn(input_string)
+>           print(calculate(processed_input))
+
+G:\C\calcPython\fuzz.py:13:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = '0 0 /'
+
+    def calculate(s_in):
+        stack = []
+        if len(s_in.split()) == 0:
+            raise CalcException("Нет данных для вычисления")
+        for token in s_in.split():
+            try:
+                s_tmp = token.strip()
+                if len(s_tmp) == 1 and is_op(s_tmp):
+                    if len(stack) < 2:
+                        raise CalcException("Неверное количество данных в стеке для операции " + token)
+                    b, a = stack.pop(), stack.pop()
+>                   match s_tmp[1]: #get first character
+                        case '+':
+E                       IndexError: string index out of range
+
+G:\C\calcPython\calc.py:63: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string='0/0',
+)
+input_string = '0/0'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+            processed_input = opn(input_string)
+>           print(calculate(processed_input))
+
+G:\C\calcPython\fuzz.py:13:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = '0 0 /'
+
+    def calculate(s_in):
+        stack = []
+        if len(s_in.split()) == 0:
+            raise CalcException("Нет данных для вычисления")
+        for token in s_in.split():
+            try:
+                s_tmp = token.strip()
+                if len(s_tmp) == 1 and is_op(s_tmp):
+                    if len(stack) < 2:
+                        raise CalcException("Неверное количество данных в стеке для операции " + token)
+                    b, a = stack.pop(), stack.pop()
+>                   match s_tmp[1]: #get first character
+                        case '+':
+E                       IndexError: string index out of range
+
+G:\C\calcPython\calc.py:63: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string='0/0',
+)
+input_string = '0/0'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+            processed_input = opn(input_string)
+>           print(calculate(processed_input))
+
+G:\C\calcPython\fuzz.py:13:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = '0 0 /'
+
+    def calculate(s_in):
+        stack = []
+        if len(s_in.split()) == 0:
+            raise CalcException("Нет данных для вычисления")
+        for token in s_in.split():
+            try:
+                s_tmp = token.strip()
+                if len(s_tmp) == 1 and is_op(s_tmp):
+                    if len(stack) < 2:
+                        raise CalcException("Неверное количество данных в стеке для операции " + token)
+                    b, a = stack.pop(), stack.pop()
+>                   match s_tmp[1]: #get first character
+                        case '+':
+E                       IndexError: string index out of range
+
+G:\C\calcPython\calc.py:63: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string='0/0',
+)
+input_string = '0/0'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+            processed_input = opn(input_string)
+>           print(calculate(processed_input))
+
+G:\C\calcPython\fuzz.py:13:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = '0 0 /'
+
+    def calculate(s_in):
+        stack = []
+        if len(s_in.split()) == 0:
+            raise CalcException("Нет данных для вычисления")
+        for token in s_in.split():
+            try:
+                s_tmp = token.strip()
+                if len(s_tmp) == 1 and is_op(s_tmp):
+                    if len(stack) < 2:
+                        raise CalcException("Неверное количество данных в стеке для операции " + token)
+                    b, a = stack.pop(), stack.pop()
+>                   match s_tmp[1]: #get first character
+                        case '+':
+E                       IndexError: string index out of range
+
+G:\C\calcPython\calc.py:63: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string='0/0',
+)
+input_string = '0/0'
+
+    @given(st.text(min_size=0))
+    @settings(verbosity=Verbosity.verbose, max_examples=10000)  # Включает подробный вывод
+    def test_calculate_with_processed_input(input_string):
+        processed_input = ""
+        try:
+            # Сначала преобразуем входное выражение в ОПН
+            processed_input = opn(input_string)
+>           print(calculate(processed_input))
+
+G:\C\calcPython\fuzz.py:13:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s_in = '0 0 /'
+
+    def calculate(s_in):
+        stack = []
+        if len(s_in.split()) == 0:
+            raise CalcException("Нет данных для вычисления")
+        for token in s_in.split():
+            try:
+                s_tmp = token.strip()
+                if len(s_tmp) == 1 and is_op(s_tmp):
+                    if len(stack) < 2:
+                        raise CalcException("Неверное количество данных в стеке для операции " + token)
+                    b, a = stack.pop(), stack.pop()
+>                   match s_tmp[1]: #get first character
+                        case '+':
+E                       IndexError: string index out of range
+
+G:\C\calcPython\calc.py:63: IndexError
+
+Trying example: test_calculate_with_processed_input(
+    input_string='0Z',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='000',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='010',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='0;0',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='0E0',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='0Y0',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='0Z0',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='0𐤀',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='𐤫0',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='030',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='020',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='040',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='090',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='09',
+)
+Trying example: test_calculate_with_processed_input(
+    input_string='90',
+)
+================================================ Hypothesis Statistics ================================================
+::test_calculate_with_processed_input:
+
+  - during reuse phase (0.16 seconds):
+    - Typical runtimes: ~ 6-71 ms, of which ~ 0-4 ms in data generation
+    - 0 passing examples, 9 failing examples, 0 invalid examples
+    - Found 1 distinct error in this phase
+
+  - during shrink phase (0.13 seconds):
+    - Typical runtimes: ~ 1ms, of which ~ 0-1 ms in data generation
+    - 25 passing examples, 1 failing examples, 0 invalid examples
+    - Tried 26 shrinks of which 0 were successful
+
+  - Stopped because nothing left to do
+
+
+=============================================== short test summary info ===============================================
+FAILED ::test_calculate_with_processed_input - IndexError: string index out of range
+================================================== 1 failed in 0.43s ==================================================
+
+
+
+
+
+
+
+
+
+Тест 4
+
+
+
+
+
+================================================= test session starts =================================================
+platform win32 -- Python 3.11.4, pytest-8.1.1, pluggy-1.4.0
+rootdir: C:\Users\Astolfo
+plugins: anyio-4.1.0, hypothesis-6.100.1
+collected 1 item
+
+. .                                                                                                              [100%]
+================================================ Hypothesis Statistics ================================================
+
+::test_calculate_with_processed_input:
+
+  - during generate phase (12.13 seconds):
+    - Typical runtimes: ~ 0-1 ms, of which < 1ms in data generation
+    - 10000 passing examples, 0 failing examples, 0 invalid examples
+
+  - Stopped because settings.max_examples=10000
+
+
+================================================= 1 passed in 12.21s ==================================================
+
+
+Тест 5
+
+================================================= test session starts =================================================
+platform win32 -- Python 3.11.4, pytest-8.1.1, pluggy-1.4.0
+rootdir: C:\Users\Astolfo
+plugins: anyio-4.1.0, hypothesis-6.100.1
+collected 1 item
+
+. .                                                                                                              [100%]
+================================================ Hypothesis Statistics ================================================
+
+::test_calculate_with_processed_input:
+
+  - during generate phase (131.44 seconds):
+    - Typical runtimes: ~ 0-1 ms, of which < 1ms in data generation
+    - 100000 passing examples, 0 failing examples, 0 invalid examples
+
+  - Stopped because settings.max_examples=100000
+
+
+============================================ 1 passed in 131.91s (0:02:11) ============================================
+
+C:\Users\Astolfo>pytest --hypothesis-show-statistics G:\C\calcPython\fuzz.py
